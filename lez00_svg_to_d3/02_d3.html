@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js" integrity="sha512-vc58qvvBdrDR4etbxMdlTt4GBQk1qjvyORR2nrsPsFPyrs+/u5c3+1Ct6upOgdZoIl7eq6k3a1UPDSNAQi/32A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>Prova con D3.js</h1>
+
+    <script>
+        //Tutto codice JavaScript
+
+        const svg = d3.select("body")
+            .append("svg")
+            .attr("width", 300)
+            .attr("height", 800);
+
+        svg.append("circle")
+            .attr("r", 40)
+            .attr("cx", 50)
+            .attr("cy", 80)
+            .attr("stroke", "blue")
+            .attr("fill", "red")
+            ;
+    </script>
+</body>
+</html>

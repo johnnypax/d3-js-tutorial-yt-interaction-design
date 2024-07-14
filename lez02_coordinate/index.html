@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js" integrity="sha512-vc58qvvBdrDR4etbxMdlTt4GBQk1qjvyORR2nrsPsFPyrs+/u5c3+1Ct6upOgdZoIl7eq6k3a1UPDSNAQi/32A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="coordinate">Coordinate non ancora ricevute</div>
+
+    <script>
+        const svg = d3.select("body")
+            .append("svg")
+            .attr("width", 300)
+            .attr("height", 300)
+            .style("border", "1px solid blue");
+
+        svg.on("mousemove", function(event){
+            const [x, y] = d3.pointer(event);
+            // console.log(y)
+
+            // d3.select("#coordinate").text(`X: ${x}, Y: ${y}`)
+            d3.select("#coordinate").text("X: " + x + ", Y: " + y)
+        })
+    </script>
+
+</body>
+</html>
