@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js" integrity="sha512-vc58qvvBdrDR4etbxMdlTt4GBQk1qjvyORR2nrsPsFPyrs+/u5c3+1Ct6upOgdZoIl7eq6k3a1UPDSNAQi/32A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        const container = [
+            {
+                x: 30,
+                y: 50,
+                w: 50,
+                h: 20,
+                color: "blue"
+            },
+            {
+                x: 130,
+                y: 150,
+                w: 30,
+                h: 50,
+                color: "red"
+            },
+        ];
+
+        const svg = d3.select("body")
+            .append("svg")
+            .attr("width", 500)
+            .attr("height", 500)
+            .style("border", "1px solid blue");
+
+        svg.selectAll("rect")
+            .data(container)        //Contenitore dati
+            .enter()
+            .append("rect")
+            .attr("x", r => r.x)
+            .attr("y", r => r.y)
+            .attr("width", r => r.w)
+            .attr("height", r => r.h)
+            .attr("fill", r => r.color)
+    </script>
+
+</body>
+</html>
